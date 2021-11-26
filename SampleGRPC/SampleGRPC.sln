@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{701EE1AA-00BE-4C96-AE5A-B9A91132D5BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcServer", "Services\GrpcServer\GrpcServer.csproj", "{333E3D23-9102-46C8-BF4E-6225B4012831}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{B8ADE532-6612-4704-B8A5-D20AF36EC3E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcClient", "Clients\GrpcClient\GrpcClient.csproj", "{1594BAC1-F91F-4182-8E09-41B48656EE08}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{1372319A-8E2D-4949-8407-0F7800BAE982}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\serif\OneDrive\Masaüstü\grpcClient_Download_package.PNG = C:\Users\serif\OneDrive\Masaüstü\grpcClient_Download_package.PNG
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{333E3D23-9102-46C8-BF4E-6225B4012831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{333E3D23-9102-46C8-BF4E-6225B4012831}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{333E3D23-9102-46C8-BF4E-6225B4012831}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{333E3D23-9102-46C8-BF4E-6225B4012831}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1594BAC1-F91F-4182-8E09-41B48656EE08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1594BAC1-F91F-4182-8E09-41B48656EE08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1594BAC1-F91F-4182-8E09-41B48656EE08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1594BAC1-F91F-4182-8E09-41B48656EE08}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{333E3D23-9102-46C8-BF4E-6225B4012831} = {701EE1AA-00BE-4C96-AE5A-B9A91132D5BA}
+		{1594BAC1-F91F-4182-8E09-41B48656EE08} = {B8ADE532-6612-4704-B8A5-D20AF36EC3E0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D20B349-658D-4BE1-B90F-8682541E3997}
+	EndGlobalSection
+EndGlobal
