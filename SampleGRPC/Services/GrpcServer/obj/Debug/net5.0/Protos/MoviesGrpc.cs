@@ -46,6 +46,7 @@ namespace MyGRPC {
     static readonly grpc::Marshaller<global::MyGRPC.MovieResponseModel> __Marshaller_V1_MovieResponseModel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::MyGRPC.MovieResponseModel.Parser));
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
     static readonly grpc::Marshaller<global::MyGRPC.MovieListModel> __Marshaller_V1_MovieListModel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::MyGRPC.MovieListModel.Parser));
+    static readonly grpc::Marshaller<global::MyGRPC.CategoryMoviewRequestModel> __Marshaller_V1_CategoryMoviewRequestModel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::MyGRPC.CategoryMoviewRequestModel.Parser));
 
     static readonly grpc::Method<global::MyGRPC.MoviewRequestModel, global::MyGRPC.MovieResponseModel> __Method_GetMoviesById = new grpc::Method<global::MyGRPC.MoviewRequestModel, global::MyGRPC.MovieResponseModel>(
         grpc::MethodType.Unary,
@@ -68,6 +69,13 @@ namespace MyGRPC {
         __Marshaller_google_protobuf_Empty,
         __Marshaller_V1_MovieListModel);
 
+    static readonly grpc::Method<global::MyGRPC.CategoryMoviewRequestModel, global::MyGRPC.MovieListModel> __Method_GetCategoryMovies = new grpc::Method<global::MyGRPC.CategoryMoviewRequestModel, global::MyGRPC.MovieListModel>(
+        grpc::MethodType.ServerStreaming,
+        __ServiceName,
+        "GetCategoryMovies",
+        __Marshaller_V1_CategoryMoviewRequestModel,
+        __Marshaller_V1_MovieListModel);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -78,17 +86,49 @@ namespace MyGRPC {
     [grpc::BindServiceMethod(typeof(Movies), "BindService")]
     public abstract partial class MoviesBase
     {
+      /// <summary>
+      ///Unary
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::MyGRPC.MovieResponseModel> GetMoviesById(global::MyGRPC.MoviewRequestModel request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      /// <summary>
+      ///Server Streaming
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
       public virtual global::System.Threading.Tasks.Task GetMoviesFirst(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::IServerStreamWriter<global::MyGRPC.MovieResponseModel> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      /// <summary>
+      ///Server Streaming
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
       public virtual global::System.Threading.Tasks.Task GetMovies(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::IServerStreamWriter<global::MyGRPC.MovieListModel> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      ///Server Streaming
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      public virtual global::System.Threading.Tasks.Task GetCategoryMovies(global::MyGRPC.CategoryMoviewRequestModel request, grpc::IServerStreamWriter<global::MyGRPC.MovieListModel> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -102,7 +142,8 @@ namespace MyGRPC {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetMoviesById, serviceImpl.GetMoviesById)
           .AddMethod(__Method_GetMoviesFirst, serviceImpl.GetMoviesFirst)
-          .AddMethod(__Method_GetMovies, serviceImpl.GetMovies).Build();
+          .AddMethod(__Method_GetMovies, serviceImpl.GetMovies)
+          .AddMethod(__Method_GetCategoryMovies, serviceImpl.GetCategoryMovies).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -114,6 +155,7 @@ namespace MyGRPC {
       serviceBinder.AddMethod(__Method_GetMoviesById, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::MyGRPC.MoviewRequestModel, global::MyGRPC.MovieResponseModel>(serviceImpl.GetMoviesById));
       serviceBinder.AddMethod(__Method_GetMoviesFirst, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Protobuf.WellKnownTypes.Empty, global::MyGRPC.MovieResponseModel>(serviceImpl.GetMoviesFirst));
       serviceBinder.AddMethod(__Method_GetMovies, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Protobuf.WellKnownTypes.Empty, global::MyGRPC.MovieListModel>(serviceImpl.GetMovies));
+      serviceBinder.AddMethod(__Method_GetCategoryMovies, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::MyGRPC.CategoryMoviewRequestModel, global::MyGRPC.MovieListModel>(serviceImpl.GetCategoryMovies));
     }
 
   }

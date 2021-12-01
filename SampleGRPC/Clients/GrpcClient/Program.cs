@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GrpcClient.Clients;
+using System;
 using System.Threading.Tasks;
 
 namespace GrpcClient
@@ -7,14 +8,17 @@ namespace GrpcClient
     {
         static async Task Main(string[] args)
         {
-            //CustomerClient customerClient = new CustomerClient();
+            //Clients.CustomerClients customerClient = new Clients.CustomerClients();
             //await customerClient.GetCustomerClient();
 
             //GreaterClients greaterClient = new GreaterClients();
             //await greaterClient.GetGreaterClient2();
 
-            //MoviesClients movieClients = new MoviesClients();
+            MoviesClients movieClients = new MoviesClients();
             //await movieClients.GetMoviesById(1);
+
+            await movieClients.GetCustomerFirst();
+
 
             Console.ReadLine();
         }
