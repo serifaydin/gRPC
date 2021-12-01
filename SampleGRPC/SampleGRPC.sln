@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{701EE1AA-00BE-4C96-AE5A-B9A91132D5BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcServer", "Services\GrpcServer\GrpcServer.csproj", "{333E3D23-9102-46C8-BF4E-6225B4012831}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcServer", "Services\GrpcServer\GrpcServer.csproj", "{333E3D23-9102-46C8-BF4E-6225B4012831}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{B8ADE532-6612-4704-B8A5-D20AF36EC3E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcClient", "Clients\GrpcClient\GrpcClient.csproj", "{1594BAC1-F91F-4182-8E09-41B48656EE08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcClient", "Clients\GrpcClient\GrpcClient.csproj", "{1594BAC1-F91F-4182-8E09-41B48656EE08}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{1372319A-8E2D-4949-8407-0F7800BAE982}"
 	ProjectSection(SolutionItems) = preProject
