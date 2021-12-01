@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option csharp_namespace = "MyGRPC";
+import "google/protobuf/empty.proto";
+
+package V1;
+
+service Movies{
+	rpc GetMoviesById(MoviewRequestModel) returns (MovieResponseModel);
+	rpc GetMoviesFirst(google.protobuf.Empty) returns (stream MovieResponseModel);
+	rpc GetMovies(google.protobuf.Empty) returns (stream MovieListModel);
+
+}
+
+message MoviewRequestModel{
+	int32 id = 1;
+}
+
+message MovieListModel {
+  repeated MovieResponseModel person = 1;
+}
+
+message MovieResponseModel{
+	int32  id = 1 ;
+	int32 categoryId =2;
+	string code =3;
+	string description =4;
+	int64 rating = 5;
+}

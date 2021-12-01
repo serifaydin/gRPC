@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace GrpcServer {
+namespace MyGRPC {
 
   /// <summary>Holder for reflection information generated from Protos/customer.proto</summary>
   public static partial class CustomerReflection {
@@ -31,13 +31,13 @@ namespace GrpcServer {
             "YWdlGAUgASgFMnwKCEN1c3RvbWVyEjYKD0dldEN1c3RvbWVySW5mbxITLkN1",
             "c3RvbWVyTG9rdXBNb2RlbBoOLkN1c3RvbWVyTW9kZWwSOAoPR2V0TmV3Q3Vz",
             "dG9tZXJzEhMuTmV3Q3VzdG9tZXJSZXF1ZXN0Gg4uQ3VzdG9tZXJNb2RlbDAB",
-            "Qg2qAgpHcnBjU2VydmVyYgZwcm90bzM="));
+            "QgmqAgZNeUdSUENiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServer.NewCustomerRequest), global::GrpcServer.NewCustomerRequest.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServer.CustomerLokupModel), global::GrpcServer.CustomerLokupModel.Parser, new[]{ "UserId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServer.CustomerModel), global::GrpcServer.CustomerModel.Parser, new[]{ "FirstName", "LastName", "EmailAddress", "IsAlive", "Age" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::MyGRPC.NewCustomerRequest), global::MyGRPC.NewCustomerRequest.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MyGRPC.CustomerLokupModel), global::MyGRPC.CustomerLokupModel.Parser, new[]{ "UserId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MyGRPC.CustomerModel), global::MyGRPC.CustomerModel.Parser, new[]{ "FirstName", "LastName", "EmailAddress", "IsAlive", "Age" }, null, null, null, null)
           }));
     }
     #endregion
@@ -56,7 +56,7 @@ namespace GrpcServer {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcServer.CustomerReflection.Descriptor.MessageTypes[0]; }
+      get { return global::MyGRPC.CustomerReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -192,7 +192,7 @@ namespace GrpcServer {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcServer.CustomerReflection.Descriptor.MessageTypes[1]; }
+      get { return global::MyGRPC.CustomerReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -364,7 +364,7 @@ namespace GrpcServer {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcServer.CustomerReflection.Descriptor.MessageTypes[2]; }
+      get { return global::MyGRPC.CustomerReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

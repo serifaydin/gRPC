@@ -7,7 +7,7 @@
 
 using grpc = global::Grpc.Core;
 
-namespace GrpcServer {
+namespace MyGRPC {
   public static partial class Customer
   {
     static readonly string __ServiceName = "Customer";
@@ -46,14 +46,14 @@ namespace GrpcServer {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::GrpcServer.CustomerLokupModel> __Marshaller_CustomerLokupModel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcServer.CustomerLokupModel.Parser));
+    static readonly grpc::Marshaller<global::MyGRPC.CustomerLokupModel> __Marshaller_CustomerLokupModel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::MyGRPC.CustomerLokupModel.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::GrpcServer.CustomerModel> __Marshaller_CustomerModel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcServer.CustomerModel.Parser));
+    static readonly grpc::Marshaller<global::MyGRPC.CustomerModel> __Marshaller_CustomerModel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::MyGRPC.CustomerModel.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::GrpcServer.NewCustomerRequest> __Marshaller_NewCustomerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcServer.NewCustomerRequest.Parser));
+    static readonly grpc::Marshaller<global::MyGRPC.NewCustomerRequest> __Marshaller_NewCustomerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::MyGRPC.NewCustomerRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::GrpcServer.CustomerLokupModel, global::GrpcServer.CustomerModel> __Method_GetCustomerInfo = new grpc::Method<global::GrpcServer.CustomerLokupModel, global::GrpcServer.CustomerModel>(
+    static readonly grpc::Method<global::MyGRPC.CustomerLokupModel, global::MyGRPC.CustomerModel> __Method_GetCustomerInfo = new grpc::Method<global::MyGRPC.CustomerLokupModel, global::MyGRPC.CustomerModel>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetCustomerInfo",
@@ -61,7 +61,7 @@ namespace GrpcServer {
         __Marshaller_CustomerModel);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::GrpcServer.NewCustomerRequest, global::GrpcServer.CustomerModel> __Method_GetNewCustomers = new grpc::Method<global::GrpcServer.NewCustomerRequest, global::GrpcServer.CustomerModel>(
+    static readonly grpc::Method<global::MyGRPC.NewCustomerRequest, global::MyGRPC.CustomerModel> __Method_GetNewCustomers = new grpc::Method<global::MyGRPC.NewCustomerRequest, global::MyGRPC.CustomerModel>(
         grpc::MethodType.ServerStreaming,
         __ServiceName,
         "GetNewCustomers",
@@ -71,7 +71,7 @@ namespace GrpcServer {
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::GrpcServer.CustomerReflection.Descriptor.Services[0]; }
+      get { return global::MyGRPC.CustomerReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Client for Customer</summary>
@@ -102,32 +102,32 @@ namespace GrpcServer {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::GrpcServer.CustomerModel GetCustomerInfo(global::GrpcServer.CustomerLokupModel request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::MyGRPC.CustomerModel GetCustomerInfo(global::MyGRPC.CustomerLokupModel request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCustomerInfo(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::GrpcServer.CustomerModel GetCustomerInfo(global::GrpcServer.CustomerLokupModel request, grpc::CallOptions options)
+      public virtual global::MyGRPC.CustomerModel GetCustomerInfo(global::MyGRPC.CustomerLokupModel request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetCustomerInfo, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::GrpcServer.CustomerModel> GetCustomerInfoAsync(global::GrpcServer.CustomerLokupModel request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::MyGRPC.CustomerModel> GetCustomerInfoAsync(global::MyGRPC.CustomerLokupModel request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCustomerInfoAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::GrpcServer.CustomerModel> GetCustomerInfoAsync(global::GrpcServer.CustomerLokupModel request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::MyGRPC.CustomerModel> GetCustomerInfoAsync(global::MyGRPC.CustomerLokupModel request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetCustomerInfo, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncServerStreamingCall<global::GrpcServer.CustomerModel> GetNewCustomers(global::GrpcServer.NewCustomerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncServerStreamingCall<global::MyGRPC.CustomerModel> GetNewCustomers(global::MyGRPC.NewCustomerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetNewCustomers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncServerStreamingCall<global::GrpcServer.CustomerModel> GetNewCustomers(global::GrpcServer.NewCustomerRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncServerStreamingCall<global::MyGRPC.CustomerModel> GetNewCustomers(global::MyGRPC.NewCustomerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_GetNewCustomers, null, options, request);
       }

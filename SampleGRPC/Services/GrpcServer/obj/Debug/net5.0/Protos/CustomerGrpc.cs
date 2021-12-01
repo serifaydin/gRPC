@@ -7,7 +7,7 @@
 
 using grpc = global::Grpc.Core;
 
-namespace GrpcServer {
+namespace MyGRPC {
   public static partial class Customer
   {
     static readonly string __ServiceName = "Customer";
@@ -42,18 +42,18 @@ namespace GrpcServer {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
-    static readonly grpc::Marshaller<global::GrpcServer.CustomerLokupModel> __Marshaller_CustomerLokupModel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcServer.CustomerLokupModel.Parser));
-    static readonly grpc::Marshaller<global::GrpcServer.CustomerModel> __Marshaller_CustomerModel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcServer.CustomerModel.Parser));
-    static readonly grpc::Marshaller<global::GrpcServer.NewCustomerRequest> __Marshaller_NewCustomerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcServer.NewCustomerRequest.Parser));
+    static readonly grpc::Marshaller<global::MyGRPC.CustomerLokupModel> __Marshaller_CustomerLokupModel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::MyGRPC.CustomerLokupModel.Parser));
+    static readonly grpc::Marshaller<global::MyGRPC.CustomerModel> __Marshaller_CustomerModel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::MyGRPC.CustomerModel.Parser));
+    static readonly grpc::Marshaller<global::MyGRPC.NewCustomerRequest> __Marshaller_NewCustomerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::MyGRPC.NewCustomerRequest.Parser));
 
-    static readonly grpc::Method<global::GrpcServer.CustomerLokupModel, global::GrpcServer.CustomerModel> __Method_GetCustomerInfo = new grpc::Method<global::GrpcServer.CustomerLokupModel, global::GrpcServer.CustomerModel>(
+    static readonly grpc::Method<global::MyGRPC.CustomerLokupModel, global::MyGRPC.CustomerModel> __Method_GetCustomerInfo = new grpc::Method<global::MyGRPC.CustomerLokupModel, global::MyGRPC.CustomerModel>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetCustomerInfo",
         __Marshaller_CustomerLokupModel,
         __Marshaller_CustomerModel);
 
-    static readonly grpc::Method<global::GrpcServer.NewCustomerRequest, global::GrpcServer.CustomerModel> __Method_GetNewCustomers = new grpc::Method<global::GrpcServer.NewCustomerRequest, global::GrpcServer.CustomerModel>(
+    static readonly grpc::Method<global::MyGRPC.NewCustomerRequest, global::MyGRPC.CustomerModel> __Method_GetNewCustomers = new grpc::Method<global::MyGRPC.NewCustomerRequest, global::MyGRPC.CustomerModel>(
         grpc::MethodType.ServerStreaming,
         __ServiceName,
         "GetNewCustomers",
@@ -63,19 +63,19 @@ namespace GrpcServer {
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::GrpcServer.CustomerReflection.Descriptor.Services[0]; }
+      get { return global::MyGRPC.CustomerReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Base class for server-side implementations of Customer</summary>
     [grpc::BindServiceMethod(typeof(Customer), "BindService")]
     public abstract partial class CustomerBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::GrpcServer.CustomerModel> GetCustomerInfo(global::GrpcServer.CustomerLokupModel request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::MyGRPC.CustomerModel> GetCustomerInfo(global::MyGRPC.CustomerLokupModel request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task GetNewCustomers(global::GrpcServer.NewCustomerRequest request, grpc::IServerStreamWriter<global::GrpcServer.CustomerModel> responseStream, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task GetNewCustomers(global::MyGRPC.NewCustomerRequest request, grpc::IServerStreamWriter<global::MyGRPC.CustomerModel> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -97,8 +97,8 @@ namespace GrpcServer {
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static void BindService(grpc::ServiceBinderBase serviceBinder, CustomerBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_GetCustomerInfo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcServer.CustomerLokupModel, global::GrpcServer.CustomerModel>(serviceImpl.GetCustomerInfo));
-      serviceBinder.AddMethod(__Method_GetNewCustomers, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::GrpcServer.NewCustomerRequest, global::GrpcServer.CustomerModel>(serviceImpl.GetNewCustomers));
+      serviceBinder.AddMethod(__Method_GetCustomerInfo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::MyGRPC.CustomerLokupModel, global::MyGRPC.CustomerModel>(serviceImpl.GetCustomerInfo));
+      serviceBinder.AddMethod(__Method_GetNewCustomers, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::MyGRPC.NewCustomerRequest, global::MyGRPC.CustomerModel>(serviceImpl.GetNewCustomers));
     }
 
   }

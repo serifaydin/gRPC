@@ -7,7 +7,7 @@
 
 using grpc = global::Grpc.Core;
 
-namespace GrpcServer {
+namespace MyGRPC {
   /// <summary>
   /// The greeting service definition.
   /// </summary>
@@ -49,12 +49,12 @@ namespace GrpcServer {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::GrpcServer.HelloRequest> __Marshaller_greet_HelloRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcServer.HelloRequest.Parser));
+    static readonly grpc::Marshaller<global::MyGRPC.HelloRequest> __Marshaller_greet_HelloRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::MyGRPC.HelloRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::GrpcServer.HelloReply> __Marshaller_greet_HelloReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcServer.HelloReply.Parser));
+    static readonly grpc::Marshaller<global::MyGRPC.HelloReply> __Marshaller_greet_HelloReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::MyGRPC.HelloReply.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::GrpcServer.HelloRequest, global::GrpcServer.HelloReply> __Method_SayHello = new grpc::Method<global::GrpcServer.HelloRequest, global::GrpcServer.HelloReply>(
+    static readonly grpc::Method<global::MyGRPC.HelloRequest, global::MyGRPC.HelloReply> __Method_SayHello = new grpc::Method<global::MyGRPC.HelloRequest, global::MyGRPC.HelloReply>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SayHello",
@@ -64,7 +64,7 @@ namespace GrpcServer {
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::GrpcServer.GreetReflection.Descriptor.Services[0]; }
+      get { return global::MyGRPC.GreetReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Client for Greeter</summary>
@@ -103,7 +103,7 @@ namespace GrpcServer {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::GrpcServer.HelloReply SayHello(global::GrpcServer.HelloRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::MyGRPC.HelloReply SayHello(global::MyGRPC.HelloRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SayHello(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -114,7 +114,7 @@ namespace GrpcServer {
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::GrpcServer.HelloReply SayHello(global::GrpcServer.HelloRequest request, grpc::CallOptions options)
+      public virtual global::MyGRPC.HelloReply SayHello(global::MyGRPC.HelloRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SayHello, null, options, request);
       }
@@ -127,7 +127,7 @@ namespace GrpcServer {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::GrpcServer.HelloReply> SayHelloAsync(global::GrpcServer.HelloRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::MyGRPC.HelloReply> SayHelloAsync(global::MyGRPC.HelloRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SayHelloAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -138,7 +138,7 @@ namespace GrpcServer {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::GrpcServer.HelloReply> SayHelloAsync(global::GrpcServer.HelloRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::MyGRPC.HelloReply> SayHelloAsync(global::MyGRPC.HelloRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SayHello, null, options, request);
       }

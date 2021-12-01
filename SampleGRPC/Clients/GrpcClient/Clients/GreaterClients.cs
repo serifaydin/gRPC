@@ -1,11 +1,11 @@
 ﻿using Grpc.Net.Client;
-using GrpcServer;
+using MyGRPC;
 using System;
 using System.Threading.Tasks;
 
 namespace GrpcClient.Clients
 {
-    public class GreaterClient
+    public class GreaterClients
     {
         public async Task GetGreaterClient()
         {

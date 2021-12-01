@@ -1,5 +1,4 @@
-﻿using GrpcClient.Clients;
-using System;
+﻿using System;
 using System.Threading.Tasks;
 
 namespace GrpcClient
@@ -11,8 +10,11 @@ namespace GrpcClient
             //CustomerClient customerClient = new CustomerClient();
             //await customerClient.GetCustomerClient();
 
-            GreaterClient greaterClient = new GreaterClient();
-            await greaterClient.GetGreaterClient2();
+            //GreaterClients greaterClient = new GreaterClients();
+            //await greaterClient.GetGreaterClient2();
+
+            //MoviesClients movieClients = new MoviesClients();
+            //await movieClients.GetMoviesById(1);
 
             Console.ReadLine();
         }
