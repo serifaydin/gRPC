@@ -17,13 +17,13 @@ namespace GrpcClient
             //Console.WriteLine($"{currentUnary.Id} {currentUnary.CategoryId} {currentUnary.Code} {currentUnary.Description} {currentUnary.Rating}");
             //Console.WriteLine("------------------");
 
-            Console.WriteLine("SERVER STREAMING");
-            List<MovieResponseModel> movieList = await moviesClients.GetMovieServerStreaming();
-            foreach (var current in movieList)
-            {
-                Console.WriteLine($"{current.Id} {current.CategoryId} {current.Code} {current.Description} {current.Rating}");
-            }
-            Console.WriteLine("------------------");
+            //Console.WriteLine("SERVER STREAMING");
+            //List<MovieResponseModel> movieList = await moviesClients.GetMovieServerStreaming();
+            //foreach (var current in movieList)
+            //{
+            //    Console.WriteLine($"{current.Id} {current.CategoryId} {current.Code} {current.Description} {current.Rating}");
+            //}
+            //Console.WriteLine("------------------");
 
             //Console.WriteLine("SERVER STREAMING LIST RESPONSE");
             //var getMovies = await moviesClients.GetMovies();
@@ -40,6 +40,15 @@ namespace GrpcClient
             //    Console.WriteLine($"{current.Id} {current.CategoryId} {current.Code} {current.Description} {current.Rating}");
             //}
             //Console.WriteLine("------------------");
+
+            Console.WriteLine("BI-DIRECTION STREAMING");
+            for (int i = 1; i <= 2; i++)
+            {
+                Console.WriteLine(i + " Client >> Server");
+                var current = await moviesClients.SetGetMovies(i);
+                Console.WriteLine($"Server >> Client - {current.Id} {current.CategoryId} {current.Code} {current.Description} {current.Rating}");
+            }
+            Console.WriteLine("------------------");
 
             Console.ReadLine();
         }

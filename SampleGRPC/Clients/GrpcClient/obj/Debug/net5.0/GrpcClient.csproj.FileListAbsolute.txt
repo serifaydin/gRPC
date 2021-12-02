@@ -19,4 +19,3 @@ D:\GitHub\GRPC\SampleGRPC\Clients\GrpcClient\obj\Debug\net5.0\GrpcClient.dll
 D:\GitHub\GRPC\SampleGRPC\Clients\GrpcClient\obj\Debug\net5.0\ref\GrpcClient.dll
 D:\GitHub\GRPC\SampleGRPC\Clients\GrpcClient\obj\Debug\net5.0\GrpcClient.pdb
 D:\GitHub\GRPC\SampleGRPC\Clients\GrpcClient\obj\Debug\net5.0\GrpcClient.genruntimeconfig.cache
-D:\GitHub\GRPC\SampleGRPC\Clients\GrpcClient\obj\Debug\net5.0\GrpcClient.csproj.AssemblyReference.cache

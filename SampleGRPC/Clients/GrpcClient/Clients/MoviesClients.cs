@@ -118,7 +118,7 @@ namespace GrpcClient.Clients
 
                 for (int i = 1; i < 11; i++)
                 {
-                    Thread.Sleep(3000);
+                    Thread.Sleep(1000);
                     await setMovie.RequestStream.WriteAsync(new MoviewRequestModel
                     {
                         Id = i
@@ -137,6 +137,41 @@ namespace GrpcClient.Clients
             }
 
             return response;
+        }
+
+        /// <summary>
+        /// Bi-Directional Streaming
+        /// </summary>
+        public async Task<MovieResponseModel> SetGetMovies(int Id)
+        {
+            MovieResponseModel responses = new MovieResponseModel();
+
+            var client = new Movies.MoviesClient(channel);
+
+            try
+            {
+                var setgetMessage = client.SetGetMovies();
+
+                await Task.Run(async () =>
+                {
+                    await setgetMessage.RequestStream.WriteAsync(new MoviewRequestModel { Id = Id });
+                });
+
+                await setgetMessage.RequestStream.CompleteAsync();
+
+                await Task.Run(async () =>
+                {
+                    while (await setgetMessage.ResponseStream.MoveNext())
+                        responses = setgetMessage.ResponseStream.Current;
+                });
+            }
+
+            catch (RpcException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return responses;
         }
     }
 }

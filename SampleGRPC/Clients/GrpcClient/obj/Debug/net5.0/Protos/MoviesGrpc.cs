@@ -86,6 +86,14 @@ namespace MyGRPC {
         __Marshaller_V1_MoviewRequestModel,
         __Marshaller_V1_MovieListModel);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::MyGRPC.MoviewRequestModel, global::MyGRPC.MovieResponseModel> __Method_SetGetMovies = new grpc::Method<global::MyGRPC.MoviewRequestModel, global::MyGRPC.MovieResponseModel>(
+        grpc::MethodType.DuplexStreaming,
+        __ServiceName,
+        "SetGetMovies",
+        __Marshaller_V1_MoviewRequestModel,
+        __Marshaller_V1_MovieResponseModel);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -168,6 +176,16 @@ namespace MyGRPC {
       public virtual grpc::AsyncClientStreamingCall<global::MyGRPC.MoviewRequestModel, global::MyGRPC.MovieListModel> SetMovies(grpc::CallOptions options)
       {
         return CallInvoker.AsyncClientStreamingCall(__Method_SetMovies, null, options);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncDuplexStreamingCall<global::MyGRPC.MoviewRequestModel, global::MyGRPC.MovieResponseModel> SetGetMovies(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SetGetMovies(new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncDuplexStreamingCall<global::MyGRPC.MoviewRequestModel, global::MyGRPC.MovieResponseModel> SetGetMovies(grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncDuplexStreamingCall(__Method_SetGetMovies, null, options);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]

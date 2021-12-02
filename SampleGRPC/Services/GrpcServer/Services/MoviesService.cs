@@ -59,5 +59,23 @@ namespace GrpcServer.Services
 
             return response;
         }
+
+        public override async Task SetGetMovies(IAsyncStreamReader<MoviewRequestModel> requestStream, IServerStreamWriter<MovieResponseModel> responseStream, ServerCallContext context)
+        {
+            MoviesDataLibrary moviesDataLibrary = new MoviesDataLibrary();
+
+            await foreach (var item in requestStream.ReadAllAsync())
+            {
+                Console.WriteLine(requestStream.Current.Id + " - Client >> Server");
+
+                var dataModel = moviesDataLibrary.GetMovieById(item.Id);
+                if (dataModel != null)
+                    await responseStream.WriteAsync(dataModel);
+
+                string msg = dataModel != null ? dataModel.Code : "Data Bulunamadı";
+
+                Console.WriteLine(msg + " - Server >> Client");
+            }
+        }
     }
 }

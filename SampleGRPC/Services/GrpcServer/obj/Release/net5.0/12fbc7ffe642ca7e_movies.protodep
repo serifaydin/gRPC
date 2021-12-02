@@ -1,0 +1,3 @@
+obj\Release\net5.0\Protos/Movies.cs \
+obj\Release\net5.0\Protos/MoviesGrpc.cs: C:/Users/serif/.nuget/packages/grpc.tools/2.34.0/build/native/include/google/protobuf/empty.proto\
+ Protos/movies.proto
