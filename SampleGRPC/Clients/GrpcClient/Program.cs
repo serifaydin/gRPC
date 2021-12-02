@@ -14,11 +14,13 @@ namespace GrpcClient
             //GreaterClients greaterClient = new GreaterClients();
             //await greaterClient.GetGreaterClient2();
 
-            MoviesClients movieClients = new MoviesClients();
+            //MoviesClients movieClients = new MoviesClients();
             //await movieClients.GetMoviesById(1);
 
-            await movieClients.GetCustomerFirst();
+            //await movieClients.GetCustomerFirst();
 
+            BiStreamClient biStreamClient = new BiStreamClient();
+            await biStreamClient.BiDirectional();
 
             Console.ReadLine();
         }

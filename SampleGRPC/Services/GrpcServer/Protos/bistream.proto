@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option csharp_namespace = "MyGRPC";
+
+package V1;
+
+service BiStreamService{
+	rpc StartBiStreaming(stream BiStreamModel) returns (stream BiStreamModel);
+}
+
+message BiStreamModel{
+	string username=1;
+	string message=2;
+}

@@ -9,9 +9,14 @@ namespace GrpcClient.Clients
 {
     public class MoviesClients
     {
+        private readonly GrpcChannel channel;
+        public MoviesClients()
+        {
+            channel = GrpcChannel.ForAddress("http://localhost:5000");
+        }
+
         public async Task<MovieResponseModel> GetMoviesById(int Id)
         {
-            var channel = GrpcChannel.ForAddress("http://localhost:5000");
             var client = new Movies.MoviesClient(channel);
 
             var input = new MoviewRequestModel
@@ -26,7 +31,6 @@ namespace GrpcClient.Clients
 
         public async Task GetCustomerFirst()
         {
-            var channel = GrpcChannel.ForAddress("http://localhost:5000");
             var client = new Movies.MoviesClient(channel);
 
             using (var call = client.GetMoviesFirst(new Empty()))

@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Protos\bistream.proto" />
     <None Remove="Protos\customer.proto" />
     <None Remove="Protos\greet.proto" />
     <None Remove="Protos\movies.proto" />
@@ -25,6 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Protobuf Include="Protos\bistream.proto" GrpcServices="Client" />
     <Protobuf Include="Protos\customer.proto" GrpcServices="Client" />
     <Protobuf Include="Protos\greet.proto" GrpcServices="Client" />
     <Protobuf Include="Protos\movies.proto" GrpcServices="Client" />

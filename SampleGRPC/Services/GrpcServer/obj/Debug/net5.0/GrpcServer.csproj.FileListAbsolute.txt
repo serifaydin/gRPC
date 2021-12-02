@@ -3,7 +3,6 @@ D:\GitHub\GRPC\SampleGRPC\Services\GrpcServer\obj\Debug\net5.0\GrpcServer.Assemb
 D:\GitHub\GRPC\SampleGRPC\Services\GrpcServer\obj\Debug\net5.0\GrpcServer.AssemblyInfo.cs
 D:\GitHub\GRPC\SampleGRPC\Services\GrpcServer\obj\Debug\net5.0\GrpcServer.csproj.CoreCompileInputs.cache
 D:\GitHub\GRPC\SampleGRPC\Services\GrpcServer\obj\Debug\net5.0\GrpcServer.MvcApplicationPartsAssemblyInfo.cache
-D:\GitHub\GRPC\SampleGRPC\Services\GrpcServer\obj\Debug\net5.0\GrpcServer.csproj.AssemblyReference.cache
 D:\GitHub\GRPC\SampleGRPC\Services\GrpcServer\bin\Debug\net5.0\appsettings.Development.json
 D:\GitHub\GRPC\SampleGRPC\Services\GrpcServer\bin\Debug\net5.0\appsettings.json
 D:\GitHub\GRPC\SampleGRPC\Services\GrpcServer\bin\Debug\net5.0\GrpcServer.exe
@@ -29,3 +28,4 @@ D:\GitHub\GRPC\SampleGRPC\Services\GrpcServer\obj\Debug\net5.0\GrpcServer.dll
 D:\GitHub\GRPC\SampleGRPC\Services\GrpcServer\obj\Debug\net5.0\ref\GrpcServer.dll
 D:\GitHub\GRPC\SampleGRPC\Services\GrpcServer\obj\Debug\net5.0\GrpcServer.pdb
 D:\GitHub\GRPC\SampleGRPC\Services\GrpcServer\obj\Debug\net5.0\GrpcServer.genruntimeconfig.cache
+D:\GitHub\GRPC\SampleGRPC\Services\GrpcServer\obj\Debug\net5.0\GrpcServer.csproj.AssemblyReference.cache

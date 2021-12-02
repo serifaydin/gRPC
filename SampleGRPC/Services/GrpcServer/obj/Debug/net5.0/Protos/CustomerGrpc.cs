@@ -10,7 +10,7 @@ using grpc = global::Grpc.Core;
 namespace MyGRPC {
   public static partial class Customer
   {
-    static readonly string __ServiceName = "Customer";
+    static readonly string __ServiceName = "V1.Customer";
 
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
@@ -42,23 +42,23 @@ namespace MyGRPC {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
-    static readonly grpc::Marshaller<global::MyGRPC.CustomerLokupModel> __Marshaller_CustomerLokupModel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::MyGRPC.CustomerLokupModel.Parser));
-    static readonly grpc::Marshaller<global::MyGRPC.CustomerModel> __Marshaller_CustomerModel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::MyGRPC.CustomerModel.Parser));
-    static readonly grpc::Marshaller<global::MyGRPC.NewCustomerRequest> __Marshaller_NewCustomerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::MyGRPC.NewCustomerRequest.Parser));
+    static readonly grpc::Marshaller<global::MyGRPC.CustomerLokupModel> __Marshaller_V1_CustomerLokupModel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::MyGRPC.CustomerLokupModel.Parser));
+    static readonly grpc::Marshaller<global::MyGRPC.CustomerModel> __Marshaller_V1_CustomerModel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::MyGRPC.CustomerModel.Parser));
+    static readonly grpc::Marshaller<global::MyGRPC.NewCustomerRequest> __Marshaller_V1_NewCustomerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::MyGRPC.NewCustomerRequest.Parser));
 
     static readonly grpc::Method<global::MyGRPC.CustomerLokupModel, global::MyGRPC.CustomerModel> __Method_GetCustomerInfo = new grpc::Method<global::MyGRPC.CustomerLokupModel, global::MyGRPC.CustomerModel>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetCustomerInfo",
-        __Marshaller_CustomerLokupModel,
-        __Marshaller_CustomerModel);
+        __Marshaller_V1_CustomerLokupModel,
+        __Marshaller_V1_CustomerModel);
 
     static readonly grpc::Method<global::MyGRPC.NewCustomerRequest, global::MyGRPC.CustomerModel> __Method_GetNewCustomers = new grpc::Method<global::MyGRPC.NewCustomerRequest, global::MyGRPC.CustomerModel>(
         grpc::MethodType.ServerStreaming,
         __ServiceName,
         "GetNewCustomers",
-        __Marshaller_NewCustomerRequest,
-        __Marshaller_CustomerModel);
+        __Marshaller_V1_NewCustomerRequest,
+        __Marshaller_V1_CustomerModel);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor

@@ -2,6 +2,8 @@ syntax = "proto3";
 
 option csharp_namespace = "MyGRPC";
 
+package V1;
+
 service Customer{
 	rpc GetCustomerInfo (CustomerLokupModel) returns (CustomerModel);
 	rpc GetNewCustomers(NewCustomerRequest) returns (stream CustomerModel);

@@ -1,9 +1,4 @@
 ﻿using GrpcServer.Services;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 
 namespace GrpcServer
 {
@@ -31,6 +26,7 @@ namespace GrpcServer
                 endpoints.MapGrpcService<GreeterService>();
                 endpoints.MapGrpcService<CustomerService>();
                 endpoints.MapGrpcService<MoviesService>();
+                endpoints.MapGrpcService<BiStreamServices>();
 
                 endpoints.MapGet("/", async context =>
                 {

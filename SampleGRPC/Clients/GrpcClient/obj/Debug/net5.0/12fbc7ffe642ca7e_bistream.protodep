@@ -1,0 +1,2 @@
+obj\Debug\net5.0\Protos/Bistream.cs \
+obj\Debug\net5.0\Protos/BistreamGrpc.cs: Protos/bistream.proto

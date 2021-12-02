@@ -1,3 +1,4 @@
+D:\GitHub\GRPC\SampleGRPC\Clients\GrpcClient\obj\Debug\net5.0\GrpcClient.GeneratedMSBuildEditorConfig.editorconfig
 D:\GitHub\GRPC\SampleGRPC\Clients\GrpcClient\bin\Debug\net5.0\GrpcClient.exe
 D:\GitHub\GRPC\SampleGRPC\Clients\GrpcClient\bin\Debug\net5.0\GrpcClient.deps.json
 D:\GitHub\GRPC\SampleGRPC\Clients\GrpcClient\bin\Debug\net5.0\GrpcClient.runtimeconfig.json
@@ -10,7 +11,6 @@ D:\GitHub\GRPC\SampleGRPC\Clients\GrpcClient\bin\Debug\net5.0\Grpc.Core.Api.dll
 D:\GitHub\GRPC\SampleGRPC\Clients\GrpcClient\bin\Debug\net5.0\Grpc.Net.Client.dll
 D:\GitHub\GRPC\SampleGRPC\Clients\GrpcClient\bin\Debug\net5.0\Grpc.Net.Common.dll
 D:\GitHub\GRPC\SampleGRPC\Clients\GrpcClient\bin\Debug\net5.0\Microsoft.Extensions.Logging.Abstractions.dll
-D:\GitHub\GRPC\SampleGRPC\Clients\GrpcClient\obj\Debug\net5.0\GrpcClient.GeneratedMSBuildEditorConfig.editorconfig
 D:\GitHub\GRPC\SampleGRPC\Clients\GrpcClient\obj\Debug\net5.0\GrpcClient.AssemblyInfoInputs.cache
 D:\GitHub\GRPC\SampleGRPC\Clients\GrpcClient\obj\Debug\net5.0\GrpcClient.AssemblyInfo.cs
 D:\GitHub\GRPC\SampleGRPC\Clients\GrpcClient\obj\Debug\net5.0\GrpcClient.csproj.CoreCompileInputs.cache
@@ -19,3 +19,4 @@ D:\GitHub\GRPC\SampleGRPC\Clients\GrpcClient\obj\Debug\net5.0\GrpcClient.dll
 D:\GitHub\GRPC\SampleGRPC\Clients\GrpcClient\obj\Debug\net5.0\ref\GrpcClient.dll
 D:\GitHub\GRPC\SampleGRPC\Clients\GrpcClient\obj\Debug\net5.0\GrpcClient.pdb
 D:\GitHub\GRPC\SampleGRPC\Clients\GrpcClient\obj\Debug\net5.0\GrpcClient.genruntimeconfig.cache
+D:\GitHub\GRPC\SampleGRPC\Clients\GrpcClient\obj\Debug\net5.0\GrpcClient.csproj.AssemblyReference.cache

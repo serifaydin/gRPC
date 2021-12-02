@@ -8,9 +8,8 @@ package V1;
 service Movies{
 	rpc GetMoviesById(MoviewRequestModel) returns (MovieResponseModel); //Unary
 	rpc GetMoviesFirst(google.protobuf.Empty) returns (stream MovieResponseModel); //Server Streaming
-	rpc GetMovies(google.protobuf.Empty) returns (stream MovieListModel); //Server Streaming
-
-	rpc GetCategoryMovies(CategoryMoviewRequestModel) returns (stream MovieListModel); //Server Streaming
+	rpc GetCategoryMovies(stream CategoryMoviewRequestModel) returns (stream MovieListModel); //Client Streaming
+	rpc StartBiStreaming(stream BiStreamModel) returns (stream BiStreamModel); // Bi Directional Streaming
 }
 
 message MoviewRequestModel{
