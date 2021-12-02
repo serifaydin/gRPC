@@ -3,7 +3,7 @@ using Microsoft.Extensions.Logging;
 using MyGRPC;
 using System.Threading.Tasks;
 
-namespace GrpcServer
+namespace GrpcServer.Services
 {
     public class GreeterService : Greeter.GreeterBase
     {

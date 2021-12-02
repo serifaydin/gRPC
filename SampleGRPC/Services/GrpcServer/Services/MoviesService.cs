@@ -3,6 +3,7 @@ using Grpc.Core;
 using GrpcServer.DataLibrary;
 using Microsoft.Extensions.Logging;
 using MyGRPC;
+using System;
 using System.Threading.Tasks;
 
 namespace GrpcServer.Services
@@ -29,8 +30,8 @@ namespace GrpcServer.Services
             MoviesDataLibrary moviesDataLibrary = new MoviesDataLibrary();
             foreach (var item in moviesDataLibrary.GetList())
             {
-                await Task.Delay(1000);
                 await responseStream.WriteAsync(item);
+                await Task.Delay(TimeSpan.FromSeconds(1));
             }
         }
 
@@ -39,9 +40,24 @@ namespace GrpcServer.Services
             MoviesDataLibrary moviesDataLibrary = new MoviesDataLibrary();
 
             MovieListModel os = new MovieListModel();
-            os.Person.AddRange(moviesDataLibrary.GetList());
+            os.Movies.AddRange(moviesDataLibrary.GetList());
 
             await responseStream.WriteAsync(os);
+        }
+
+        public override async Task<MovieListModel> SetMovies(IAsyncStreamReader<MoviewRequestModel> requestStream, ServerCallContext context)
+        {
+            MoviesDataLibrary moviesDataLibrary = new MoviesDataLibrary();
+
+            var response = new MovieListModel();
+            await foreach (var item in requestStream.ReadAllAsync())
+            {
+                var dataModel = moviesDataLibrary.GetMovieById(item.Id);
+                if (dataModel != null)
+                    response.Movies.Add(dataModel);
+            }
+
+            return response;
         }
     }
 }

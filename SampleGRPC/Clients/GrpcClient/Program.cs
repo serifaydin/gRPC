@@ -1,5 +1,7 @@
 ﻿using GrpcClient.Clients;
+using MyGRPC;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace GrpcClient
@@ -8,21 +10,39 @@ namespace GrpcClient
     {
         static async Task Main(string[] args)
         {
-            //Clients.CustomerClients customerClient = new Clients.CustomerClients();
-            //await customerClient.GetCustomerClient();
+            MoviesClients moviesClients = new MoviesClients();
 
-            //GreaterClients greaterClient = new GreaterClients();
-            //await greaterClient.GetGreaterClient2();
+            //Console.WriteLine("UNARY");
+            //var currentUnary = await moviesClients.GetMoviesById(1);
+            //Console.WriteLine($"{currentUnary.Id} {currentUnary.CategoryId} {currentUnary.Code} {currentUnary.Description} {currentUnary.Rating}");
+            //Console.WriteLine("------------------");
 
-            //MoviesClients movieClients = new MoviesClients();
-            //await movieClients.GetMoviesById(1);
+            Console.WriteLine("SERVER STREAMING");
+            List<MovieResponseModel> movieList = await moviesClients.GetMovieServerStreaming();
+            foreach (var current in movieList)
+            {
+                Console.WriteLine($"{current.Id} {current.CategoryId} {current.Code} {current.Description} {current.Rating}");
+            }
+            Console.WriteLine("------------------");
 
-            //await movieClients.GetCustomerFirst();
+            //Console.WriteLine("SERVER STREAMING LIST RESPONSE");
+            //var getMovies = await moviesClients.GetMovies();
+            //foreach (var current in getMovies)
+            //{
+            //    Console.WriteLine($"{current.Id} {current.CategoryId} {current.Code} {current.Description} {current.Rating}");
+            //}
+            //Console.WriteLine("------------------");
 
-            BiStreamClient biStreamClient = new BiStreamClient();
-            await biStreamClient.BiDirectional();
+            //Console.WriteLine("CLIENT STREAMING");
+            //var movieClientStreaamingList = await moviesClients.SetMovies();
+            //foreach (var current in movieClientStreaamingList)
+            //{
+            //    Console.WriteLine($"{current.Id} {current.CategoryId} {current.Code} {current.Description} {current.Rating}");
+            //}
+            //Console.WriteLine("------------------");
 
             Console.ReadLine();
         }
     }
 }
+

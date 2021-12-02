@@ -6,22 +6,19 @@ import "google/protobuf/empty.proto";
 package V1;
 
 service Movies{
-	rpc GetMoviesById(MoviewRequestModel) returns (MovieResponseModel); //Unary
-	rpc GetMoviesFirst(google.protobuf.Empty) returns (stream MovieResponseModel); //Server Streaming
-	rpc GetCategoryMovies(stream CategoryMoviewRequestModel) returns (stream MovieListModel); //Client Streaming
-	rpc StartBiStreaming(stream BiStreamModel) returns (stream BiStreamModel); // Bi Directional Streaming
+	rpc GetMoviesById(MoviewRequestModel) returns (MovieResponseModel); 
+	rpc GetMoviesFirst(google.protobuf.Empty) returns (stream MovieResponseModel);
+	rpc GetMovies(google.protobuf.Empty) returns (stream MovieListModel);
+	rpc SetMovies(stream MoviewRequestModel) returns (MovieListModel);
+	rpc SetGetMovies(stream MoviewRequestModel) returns (stream MovieResponseModel);
 }
 
 message MoviewRequestModel{
 	int32 id = 1;
 }
 
-message CategoryMoviewRequestModel{
-	int32 categoryId = 1;
-}
-
 message MovieListModel {
-  repeated MovieResponseModel person = 1;
+  repeated MovieResponseModel movies = 1;
 }
 
 message MovieResponseModel{
@@ -31,7 +28,3 @@ message MovieResponseModel{
 	string description =4;
 	int64 rating = 5;
 }
-
-//Token ve Timeout ilede örnek yap
-//bi directional ile örnek yap
-//Client Streeam ile ilgili bir örnek yap
